@@ -1,9 +1,27 @@
+var capture;
+var w = 640,
+    h = 480;
+
 function setup() {
-  // put setup code here
+    capture = createCapture({
+        audio: false,
+        video: {
+            width: w,
+            height: h
+        }
+    }, function() {
+        console.log('capture ready.')
+    });
+    capture.elt.setAttribute('playsinline', '');
+    createCanvas(w, h);
+    capture.size(w, h);
+    capture.hide();
+
+    colorMode(HSB);
+
 }
 
 function draw() {
-  // put drawing code here
-  text ('Hello World', 10, 10);
-  ellipse (50, 50, 80, 80);
-}
+    image(capture, 0, 0, w, h);
+    
+    }
