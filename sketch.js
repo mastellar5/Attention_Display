@@ -1,6 +1,7 @@
 // ml5 Face Detection Model
 let faceapi;
 let detections = [];
+let isFace = false;
 
 // Video
 let video;
@@ -28,13 +29,25 @@ function gotFaces(error, result) {
     return;
   }
   detections = result;
+  
+  if (detections.length > 0) {
+    isFace = true
+  }else{
+    isFace = false;
+  }
+
   faceapi.detect(gotFaces);
-  print(result);
+  console.log(result);
 }
 
 // Draw everything
 function draw() {
-  background(0);
+  if( isFace ){
+    background(178);
+  }else{
+    background(0);
+  }
+  
 
   // Just look at the first face and draw all the points
   if (detections.length > 0) {
@@ -47,6 +60,8 @@ function draw() {
     }
 
   }
+
+  
 
     
 }
