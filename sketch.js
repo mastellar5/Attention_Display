@@ -6,10 +6,15 @@ let isFace = false;
 // Video
 let video;
 
+//Video1 and Video2
+let video1 = document.getElementById("video1");
+let video2 = document.getElementById("video2");
+
 function setup() {
+  
   createCanvas(360, 270);
 
-  // Creat the video and start face tracking
+  // Create the video and start face tracking
   video = createCapture(VIDEO);
   video.size(width, height);
   // Only need landmarks for this example
@@ -40,14 +45,21 @@ function gotFaces(error, result) {
   console.log(result);
 }
 
+
 // Draw everything
 function draw() {
+
   if( isFace ){
-    background(178);
+    background(178, 50, 1);
+    // video1.style.opacity = "1";
+    // or
+    // video1.classList.toggle("visible");
   }else{
     background(0);
+    // video1.style.opacity = "0";
+    // or
+    // video1.classList.toggle("visible");
   }
-  
 
   // Just look at the first face and draw all the points
   if (detections.length > 0) {
@@ -61,7 +73,4 @@ function draw() {
 
   }
 
-  
-
-    
 }
