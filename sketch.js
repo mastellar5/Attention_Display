@@ -42,7 +42,7 @@ function gotFaces(error, result) {
   }
 
   faceapi.detect(gotFaces);
-  console.log(result);
+  // console.log(result);
 }
 
 
@@ -51,14 +51,10 @@ function draw() {
 
   if( isFace ){
     background(178, 50, 1);
-    // video1.style.opacity = "1";
-    // or
-    // video1.classList.toggle("visible");
+    setVideoActive();
   }else{
     background(0);
-    // video1.style.opacity = "0";
-    // or
-    // video1.classList.toggle("visible");
+    setVideoPassive();
   }
 
   // Just look at the first face and draw all the points
@@ -73,4 +69,25 @@ function draw() {
 
   }
 
+}
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    setVideoActive();
+  } else if (keyCode ===RIGHT_ARROW){
+    setVideoPassive();
+  }
+}
+
+function setVideoActive(){
+  video1.classList.add("hidden");
+  video1.pause();
+  video2.play();
+}
+
+function setVideoPassive(){
+    video1.classList.remove("hidden");
+    video1.play();
+    video2.pause();
+    video2.currentTime = 0;
 }

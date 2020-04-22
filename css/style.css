@@ -1,0 +1,31 @@
+body{
+    margin-top: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+
+}
+
+video {
+    max-width: 100%;
+}
+
+#activevideo{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#idlevideo{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#video1 {
+    transition: opacity 1s;
+}
+
