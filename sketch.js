@@ -71,13 +71,13 @@ function draw() {
 
 }
 
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    setVideoActive();
-  } else if (keyCode ===RIGHT_ARROW){
-    setVideoPassive();
-  }
-}
+// function keyPressed() {
+//   if (keyCode === LEFT_ARROW) {
+//     setVideoActive();
+//   } else if (keyCode ===RIGHT_ARROW){
+//     setVideoPassive();
+//   }
+// }
 
 function setVideoActive(){
   video1.classList.add("hidden");
