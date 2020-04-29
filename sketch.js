@@ -12,14 +12,19 @@ let video2 = document.getElementById("video2");
 
 function setup() {
   
-  createCanvas(360, 270);
+  //commented to hide canvas
+  //createCanvas(360, 270);
 
   // Create the video and start face tracking
   video = createCapture(VIDEO);
   video.size(width, height);
+  
   // Only need landmarks for this example
   const faceOptions = { withLandmarks: true, withExpressions: false, withDescriptors: false };
   faceapi = ml5.faceApi(video, faceOptions, faceReady);
+
+  //to hide webcam footage
+  video.hide();
 }
 
 // Start detecting faces
@@ -71,14 +76,6 @@ function draw() {
 
 }
 
-// function keyPressed() {
-//   if (keyCode === LEFT_ARROW) {
-//     setVideoActive();
-//   } else if (keyCode ===RIGHT_ARROW){
-//     setVideoPassive();
-//   }
-// }
-
 function setVideoActive(){
   video1.classList.add("hidden");
   video1.pause();
@@ -91,3 +88,11 @@ function setVideoPassive(){
     video2.pause();
     video2.currentTime = 0;
 }
+
+// function keyPressed() {
+//   if (keyCode === LEFT_ARROW) {
+//     setVideoActive();
+//   } else if (keyCode ===RIGHT_ARROW){
+//     setVideoPassive();
+//   }
+// }
