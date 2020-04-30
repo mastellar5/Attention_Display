@@ -7,6 +7,7 @@ body{
 
 }
 
+<<<<<<< HEAD
 #background{
     position: absolute; 
     top: 0;
@@ -21,6 +22,8 @@ img {
     height: 100%;
 }
 
+=======
+>>>>>>> parent of a002280... fixed some code in css
 video {
     width: 100%;    
     height: auto;   
@@ -32,9 +35,15 @@ video {
     left: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     z-index: 10;
     width: 100%;
     height: 100%;
+=======
+    z-index: 1;
+    width: 100%    !important;
+    height: auto   !important;
+>>>>>>> parent of a002280... fixed some code in css
 =======
     z-index: 1;
     width: 100%    !important;
@@ -51,6 +60,7 @@ video {
     position: absolute; 
     bottom: 0;
     left: 0;
+<<<<<<< HEAD
     
     z-index: 20;
     width: 100%;
@@ -60,6 +70,11 @@ video {
     width: 100%    !important;
     height: auto   !important;
 
+=======
+    z-index: 10;
+    width: 100%    !important;
+    height: auto   !important;
+>>>>>>> parent of a002280... fixed some code in css
 }
 
 #video1 {
