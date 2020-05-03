@@ -55,6 +55,7 @@ function gotFaces(error, result) {
 // Draw everything
 function draw() {
 
+    
   if( isFace ){
     background(178, 50, 1);
     setVideoActive();
@@ -75,12 +76,10 @@ function draw() {
 
   }
 
-  
+  //hide startup video when it ends
   video3.onended = function() {
     hideStartupVideo();
 };
-
-  // video3.onended = hideStartupVideo();
 
 }
 
