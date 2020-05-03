@@ -9,6 +9,7 @@ let video;
 //Video1 and Video2
 let video1 = document.getElementById("video1");
 let video2 = document.getElementById("video2");
+let video3 = document.getElementById("video3");
 
 function setup() {
   
@@ -74,6 +75,13 @@ function draw() {
 
   }
 
+  
+  video3.onended = function() {
+    hideStartupVideo();
+};
+
+  // video3.onended = hideStartupVideo();
+
 }
 
 function setVideoActive(){
@@ -87,6 +95,10 @@ function setVideoPassive(){
     video1.play();
     video2.pause();
     video2.currentTime = 0;
+}
+
+function hideStartupVideo(){
+  video3.classList.add("hidden");
 }
 
 // function keyPressed() {
