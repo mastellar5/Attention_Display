@@ -1,4 +1,5 @@
 body{
+    object-fit: cover;
     margin-top: 100vh;
 }
 
@@ -8,6 +9,7 @@ body{
 }
 
 video {
+    object-fit: fill;
     width: 100%;    
     height: 100%;   
 }
@@ -18,6 +20,7 @@ canvas{
 }
 
 #activevideo{
+    object-fit: fill;
     position: absolute; 
     top: 0;
     left: 0;
@@ -27,6 +30,7 @@ canvas{
 }
 
 #idlevideo{
+    object-fit: fill;
     position: absolute; 
     top: 0;
     left: 0;
