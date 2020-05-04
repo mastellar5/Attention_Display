@@ -98,6 +98,7 @@ function setVideoPassive(){
 
 function hideStartupVideo(){
   video3.classList.add("hidden");
+  video1.play();
 }
 
 // function keyPressed() {

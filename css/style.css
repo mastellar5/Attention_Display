@@ -53,6 +53,6 @@ canvas{
     transition: opacity 1s;
 }
 
-/* #video3 {
-    transition: opacity 0.5s;
-} */
+#video3 {
+    transition: opacity 1s;
+}
